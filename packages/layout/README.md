@@ -5,7 +5,7 @@
 ## 使用
 
 ```jsx
-import Layout, { MainContent } from '@os2edu';
+import Layout, { MainContent } from '@os2edu/layout';
 
 const headerProps = {
   subTitle: '课程培训',
