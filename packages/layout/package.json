@@ -35,7 +35,7 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "@os2edu/layout",
+  "name": "@tty/layout",
   "author": "os2edu",
   "module": "dist/layout.esm.js",
   "size-limit": [
