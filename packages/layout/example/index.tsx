@@ -1,7 +1,7 @@
 import 'react-app-polyfill/ie11';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import Layout from '../src';
+import Layout, { MainContent } from '../src';
 
 const App = () => {
   const headerProps = {
@@ -10,7 +10,7 @@ const App = () => {
       customRender: <span onClick={() => console.log('click')}>社区首页</span>,
       dropMenu: [
         {
-          key: 'first-11-2',
+          key: 'first',
           title: 'first',
           onClick: () => console.log('first'),
         },
@@ -30,7 +30,11 @@ const App = () => {
       },
     },
   };
-  return <Layout headerProps={headerProps} />;
+  return (
+    <Layout headerProps={headerProps}>
+      <MainContent>主内容</MainContent>
+    </Layout>
+  );
 };
 
 ReactDOM.render(<App />, document.getElementById('root'));

@@ -1,10 +1,13 @@
 import React from 'react';
-import { ILayoutProps } from './types'
-import { classNamePrefix } from './constants'
-import Header from './Header'
+import { ILayoutProps } from './types';
+import { classNamePrefix } from './constants';
+import Header from './Header';
+import MainContent from './MainContent';
 
 import './fonts/index.css';
 import './index.css';
+
+export { Header, MainContent };
 
 const Layout = (props: React.PropsWithChildren<ILayoutProps>) => {
   const { headerProps, className: cln, children, ...restProps } = props;

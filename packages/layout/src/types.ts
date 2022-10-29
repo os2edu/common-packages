@@ -20,6 +20,9 @@ export interface IHeaderProps extends React.HTMLAttributes<HTMLHeadElement> {
   extra?: Partial<IExtraProps>;
 }
 
+export interface IMainContentProps extends React.HTMLAttributes<HTMLDivElement> {
+}
+
 export interface ILayoutProps extends React.HTMLAttributes<HTMLElement> {
   headerProps: IHeaderProps;
 }
