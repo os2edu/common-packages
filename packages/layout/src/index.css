@@ -16,7 +16,7 @@
 }
 
 .os2edu-layout > header {
-  height: 68px;
+  height: 56px;
   box-shadow: 0 1px 8px #e8e8e8;
 }
 
@@ -77,4 +77,25 @@ header > .header-content > .logo-wrap {
 
 header > .header-content > .extra-wrap {
   gap: 6px;
+}
+
+@media screen and (min-width: 200px) and (max-width: 600px) {
+  .os2edu-layout > header {
+    height: 50px;
+    padding: 0 10px;
+  }
+  .logo-wrap > img {
+    width: 40px;
+    height: 40px;
+  }
+  .logo-wrap .logo-title a {
+    font-size: 16px;
+  }
+
+  .logo-wrap .logo-title .logo-subtitle {
+    display: none;
+  }
+  .os2edu-layout > header > .header-content .extra-wrap {
+    display: none;
+  }
 }
