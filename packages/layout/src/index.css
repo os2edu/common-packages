@@ -3,7 +3,7 @@
   flex-direction: column;
   width: 100%;
   height: 100%;
-  font: normal normal normal 14px/1 FontAwesome;
+  font-family: 'Raleway', sans-serif;
 }
 
 .os2edu-layout-content {

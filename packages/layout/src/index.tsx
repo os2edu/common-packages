@@ -4,7 +4,6 @@ import { classNamePrefix } from './constants';
 import Header from './Header';
 import MainContent from './MainContent';
 
-import './fonts/index.css';
 import './index.css';
 
 export { Header, MainContent };
