@@ -1,10 +1,22 @@
 import React from 'react';
 import { IHeaderProps } from './types';
 import { classNamePrefix, logoURL, avatarURL } from './constants';
+import DropDown from './components/Dropdown';
 
 const Header = (props: IHeaderProps) => {
   const { logo, title, subTitle, extra, ...restProps } = props;
-  console.log(props);
+  const renderUserInfo = () => {
+    return (
+      <span className="inline-flex-wrap">
+        {extra?.userInfo?.phone}
+        <img
+          width={30}
+          src={extra?.userInfo?.avatar || avatarURL}
+          alt="avatar"
+        />
+      </span>
+    );
+  };
   return (
     <header {...restProps}>
       <div className={`header-content ${classNamePrefix}-layout-content`}>
@@ -19,17 +31,18 @@ const Header = (props: IHeaderProps) => {
         </div>
         <div className="inline-flex-wrap extra-wrap">
           {extra?.customRender && (
-            <span className="inline-flex-wrap extra-wrap-custom">{extra.customRender}</span>
+            <span className="inline-flex-wrap extra-wrap-custom">
+              {extra.customRender}
+            </span>
           )}
           {extra?.userInfo && (
-            <span className='inline-flex-wrap'>
-              {extra.userInfo.phone}
-              <img
-                width={30}
-                src={extra.userInfo.avatar || avatarURL}
-                alt="avatar"
-              />
-            </span>
+            <>
+              {extra.dropMenu ? (
+                <DropDown menu={extra.dropMenu}>{renderUserInfo()}</DropDown>
+              ) : (
+                renderUserInfo()
+              )}
+            </>
           )}
         </div>
       </div>

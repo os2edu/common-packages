@@ -9,6 +9,7 @@ export interface IExtraProps {
     phone: string;
     avatar: string;
   }
+  dropMenu: IMenuItem[];
   customRender: React.ReactNode;
 }
 
