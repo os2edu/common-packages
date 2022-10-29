@@ -6,8 +6,8 @@ export interface IMenuItem {
 
 export interface IExtraProps {
   userInfo: {
-    phone: string;
-    avatar: string;
+    phone?: string;
+    avatar?: string;
   }
   dropMenu: IMenuItem[];
   customRender: React.ReactNode;
