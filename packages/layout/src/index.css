@@ -10,11 +10,11 @@
   max-width: 1200px;
   margin: 0 auto;
   height: 100%;
-  overflow: auto;
 }
 
 .os2edu-layout-main-content {
   padding: 20px 0 40px;
+  overflow: auto;
 }
 
 .os2edu-layout > header {
