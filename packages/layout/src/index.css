@@ -1,0 +1,76 @@
+.os2edu-layout {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  font: normal normal normal 14px/1 FontAwesome;
+}
+
+.os2edu-layout-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.os2edu-layout > header {
+  height: 68px;
+  box-shadow: 0 1px 8px #e8e8e8;
+}
+
+.os2edu-layout > main {
+  flex: 1;
+  overflow: auto;
+}
+
+header > .header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+header > .header-content .inline-flex-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+header > .header-content > .logo-wrap {
+  gap: 6px;
+}
+
+.logo-wrap .logo-title {
+  font-size: 18px;
+  font-weight: 600;
+  display: inline-flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.logo-wrap .logo-title a {
+  text-decoration: none;
+  color: currentColor;
+}
+.logo-wrap .logo-title a:hover {
+  opacity: 0.8;
+}
+
+.logo-wrap .logo-title .logo-subtitle {
+  font-size: 14px;
+  font-weight: 200;
+  cursor: pointer;
+}
+
+.logo-wrap .logo-title .logo-subtitle:hover {
+  color: #ff589e;
+  opacity: 0.8;
+}
+
+.logo-wrap > img {
+  width: 46px;
+  height: 46px;
+}
+
+header > .header-content > .extra-wrap {
+  gap: 6px;
+}
