@@ -1,7 +1,9 @@
 import React from 'react';
 import { IHeaderProps } from './types';
-import { logoURL, avatarURL } from './constants';
+import { logoURL, avatarURL, classNamePrefix } from './constants';
 import DropDown from './components/Dropdown';
+
+import "./Header.css"
 
 const Header = (props: IHeaderProps) => {
   const { logo, title, subTitle, extra, ...restProps } = props;
@@ -18,7 +20,7 @@ const Header = (props: IHeaderProps) => {
     );
   };
   return (
-    <header {...restProps}>
+    <header {...restProps} className={`${classNamePrefix}-header`}>
       <div className="header-content">
         <div className="inline-flex-wrap logo-wrap">
           <img src={logo || logoURL} alt="logo" id="logo" />
