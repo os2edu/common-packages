@@ -5,9 +5,9 @@ import Layout, { MainContent } from '../src';
 
 const App = () => {
   const headerProps = {
-    subTitle: '课程培训2',
+    // subTitle: '课程培训2',
     extra: {
-      customRender: <span onClick={() => console.log('click')}>社区首页</span>,
+      customRender: <a onClick={() => console.log('click')}>社区首页</a>,
       dropMenu: [
         {
           key: 'first',
