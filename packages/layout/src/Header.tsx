@@ -3,20 +3,20 @@ import { IHeaderProps } from './types';
 import { logoURL, avatarURL, classNamePrefix } from './constants';
 import DropDown from './components/Dropdown';
 
-import "./Header.css"
+import './Header.css';
 
 const Header = (props: IHeaderProps) => {
   const { logo, title, subTitle, extra, ...restProps } = props;
   const renderUserInfo = () => {
     return (
-      <span className="inline-flex-wrap">
-        {extra?.userInfo?.phone}
+      <>
         <img
           width={30}
           src={extra?.userInfo?.avatar || avatarURL}
           alt="avatar"
         />
-      </span>
+        {extra?.userInfo?.phone}
+      </>
     );
   };
   return (
@@ -42,7 +42,7 @@ const Header = (props: IHeaderProps) => {
               {extra.dropMenu ? (
                 <DropDown menu={extra.dropMenu}>{renderUserInfo()}</DropDown>
               ) : (
-                renderUserInfo()
+                <span className="inline-flex-wrap">{renderUserInfo()}</span>
               )}
             </>
           )}

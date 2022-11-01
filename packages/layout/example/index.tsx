@@ -7,21 +7,21 @@ const App = () => {
   const headerProps = {
     // subTitle: '课程培训2',
     extra: {
-      customRender: <a onClick={() => console.log('click')}>社区首页</a>,
+      customRender: <a onClick={() => console.log('click')}>社区首页3</a>,
       dropMenu: [
         {
           key: 'first',
-          title: 'first',
+          title: '个人中心',
           onClick: () => console.log('first'),
         },
         {
           key: 'second',
-          title: 'second',
+          title: '退出登录',
           onClick: () => console.log('second'),
         },
         {
           key: 'third',
-          title: 'third',
+          title: '课程礼包',
           onClick: () => console.log('third'),
         },
       ],

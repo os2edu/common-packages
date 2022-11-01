@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { classNamePrefix } from '../../constants';
 import DropDownIcon from '../Icons/Dropdown';
 
@@ -15,6 +15,7 @@ interface IProps {
 }
 const Dropdown = (props: React.PropsWithChildren<IProps>) => {
   const [visible, setVisible] = useState(false);
+  const wrapperRef = useRef<HTMLDivElement>(null);
   const ref = useRef<HTMLDivElement>(null);
   const openDropMenu = () => {
     setVisible(true);
@@ -28,16 +29,24 @@ const Dropdown = (props: React.PropsWithChildren<IProps>) => {
     closeDropMenu();
     item.onClick?.();
   };
+
+  useEffect(() => {
+    if (wrapperRef.current) {
+      const { height } = wrapperRef.current.getBoundingClientRect();
+      if(ref.current) {
+        ref.current.style.top = `${height}px`;
+      }
+    }
+  }, [wrapperRef.current, props.children]);
+
   return (
     <div
-      className={`${classNamePrefix}-dropdown ${
+      ref={wrapperRef}
+      className={`${classNamePrefix}-dropdown inline-flex-wrap ${
         visible ? `${classNamePrefix}-dropdown-open` : ''
       }`}
     >
-      <div
-        className="dropdown-trigger"
-        onClick={openDropMenu}
-      >
+      <div className="dropdown-trigger inline-flex-wrap" onClick={openDropMenu}>
         {props.children}
         <span className="dropdown-trigger-icon">
           <DropDownIcon />
