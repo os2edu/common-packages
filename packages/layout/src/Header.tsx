@@ -23,7 +23,7 @@ const Header = (props: IHeaderProps) => {
     <header {...restProps} className={`${classNamePrefix}-header`}>
       <div className="header-content">
         <div className="inline-flex-wrap logo-wrap">
-          <img src={logo || logoURL} alt="logo" id="logo" />
+          <img style={{ maxHeight: 46, maxWidth: 46 }} src={logo || logoURL} alt="logo" id="logo" />
           <div className="logo-title">
             <a href="https://os2edu.cn/homepage/">
               {title || '开源操作系统社区'}
