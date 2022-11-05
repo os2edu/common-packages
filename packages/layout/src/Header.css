@@ -52,11 +52,6 @@
   opacity: 0.8;
 }
 
-.logo-wrap > img {
-  width: 46px;
-  height: 46px;
-}
-
 .os2edu-header > .header-content > .extra-wrap {
   gap: 6px;
 }
@@ -66,10 +61,6 @@
   .os2edu-layout > header {
     height: 50px;
     padding: 0 10px;
-  }
-  .logo-wrap > img {
-    width: 40px;
-    height: 40px;
   }
   .logo-wrap .logo-title a {
     font-size: 16px;
