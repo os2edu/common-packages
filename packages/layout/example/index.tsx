@@ -32,7 +32,7 @@ const App = () => {
   };
   return (
     <Layout headerProps={headerProps}>
-      <MainContent>主内容</MainContent>
+      <MainContent>主内容3</MainContent>
     </Layout>
   );
 };
