@@ -6,7 +6,7 @@ import DropDown from './components/Dropdown';
 import './Header.css';
 
 const Header = (props: IHeaderProps) => {
-  const { logo, title, subTitle, extra, ...restProps } = props;
+  const { logo, title, subTitle, extra, homeURL, ...restProps } = props;
   const renderUserInfo = () => {
     return (
       <>
@@ -19,13 +19,18 @@ const Header = (props: IHeaderProps) => {
       </>
     );
   };
+  const redirectToHomepage = (e: any) => {
+    e.preventDefault()
+    const url = homeURL || (window.location.origin + '/homepage/')
+    window.location.replace(url)
+  }
   return (
     <header {...restProps} className={`${classNamePrefix}-header`}>
       <div className="header-content">
         <div className="inline-flex-wrap logo-wrap">
           <img style={{ width: 46 }} src={logo || logoURL} alt="logo" id="logo" />
           <div className="logo-title">
-            <a href="https://os2edu.cn/homepage/">
+            <a onClick={redirectToHomepage}>
               {title || '开源操作系统社区'}
             </a>
             {subTitle && <span className="logo-subtitle">{subTitle}</span>}

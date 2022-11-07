@@ -14,6 +14,7 @@ export interface IExtraProps {
 }
 
 export interface IHeaderProps extends React.HTMLAttributes<HTMLHeadElement> {
+  homeURL?: string;
   logo?: string;
   title?: string;
   subTitle?: string

@@ -9,7 +9,7 @@ import './index.css';
 export { Header, MainContent };
 
 const Layout = (props: React.PropsWithChildren<ILayoutProps>) => {
-  const { headerProps, className: cln, children, ...restProps } = props;
+  const { headerProps, className: cln, withLoad, children, ...restProps } = props;
   const [loaded, setLoaded] = useState(false);
 
   let className = `${classNamePrefix}-layout`;
@@ -34,7 +34,7 @@ const Layout = (props: React.PropsWithChildren<ILayoutProps>) => {
         <Header {...headerProps} />
         <main>{children}</main>
       </div>
-      {props.withLoad && !loaded && (
+      {withLoad && !loaded && (
         <div
           style={{
             position: 'fixed',
