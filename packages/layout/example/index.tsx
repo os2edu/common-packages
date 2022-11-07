@@ -31,7 +31,7 @@ const App = () => {
     },
   };
   return (
-    <Layout headerProps={headerProps}>
+    <Layout headerProps={headerProps} withLoad>
       <MainContent>主内容</MainContent>
     </Layout>
   );

@@ -25,4 +25,5 @@ export interface IMainContentProps extends React.HTMLAttributes<HTMLDivElement> 
 
 export interface ILayoutProps extends React.HTMLAttributes<HTMLElement> {
   headerProps: IHeaderProps;
+  withLoad?: boolean
 }
